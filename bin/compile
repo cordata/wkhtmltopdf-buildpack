@@ -33,12 +33,15 @@ chmod +x $WKHTMLTOPDF_BINARIES/*
 
 echo "-----> Moving binaries to the right place"
 mv $WKHTMLTOPDF_BINARIES/* $BIN_PATH/
+echo "Here's the bin path: " $BIN_PATH
 
 echo "-----> Cleaning up"
 rm -rf $WKHTMLTOPDF_PATH
+echo "Here's the temp wkhtmltopdf path: " $WKHTMLTOPDF_PATH
 
 echo "-----> Installing fonts"
 mkdir -p $1/app/.fonts
 ls $FONTS_DIR
+echo fonts directory - $FONTS_DIR
 cp $FONTS_DIR/* $1/app/.fonts/
 fc-cache -f $1/app/.fonts
