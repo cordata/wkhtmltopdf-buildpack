@@ -38,7 +38,7 @@ echo "-----> Cleaning up"
 rm -rf $WKHTMLTOPDF_PATH
 
 echo "-----> Installing fonts"
-mkdir -p $1/.fonts
+mkdir -p $1/app/.fonts
 ls $FONTS_DIR
-cp $FONTS_DIR/* $1/.fonts/
-fc-cache -f $1/.fonts
+cp $FONTS_DIR/* $1/app/.fonts/
+fc-cache -f $1/app/.fonts
