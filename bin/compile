@@ -60,4 +60,4 @@ echo fonts directory - $FONTS_DIR
 cp $FONTS_DIR/* $1/app/.fonts/
 fc-cache -f $1/app/.fonts
 
-echo "<html><body>help</body></html>" | $BIN_PATH/wkhtmltopdf - -
+echo "<html><body>help</body></html>" | $BIN_PATH/wkhtmltopdf - - | head
