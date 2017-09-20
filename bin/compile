@@ -7,11 +7,12 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 BIN_PATH="$1/app/bin/"
-echo "binaries should be put here $BIN_PATH"
-ls -l $BIN_PATH
 
 TMP_PATH="$BUILD_DIR/app/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
+
+echo "binaries should be put here $BIN_PATH"
+ls -l $BIN_PATH
 
 WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz"
 WKHTMLTOPDF_TAR="$CACHE_DIR/wkhtmltox.tar.xz"
