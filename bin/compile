@@ -6,7 +6,7 @@ set -e
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-BIN_PATH="$1/app/bin/"
+BIN_PATH="/app/bin/"
 
 TMP_PATH="$BUILD_DIR/app/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
