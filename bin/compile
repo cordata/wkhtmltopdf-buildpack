@@ -6,9 +6,9 @@ set -e
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-BIN_PATH="/app/bin/"
+BIN_PATH="$1/bin/"
 
-TMP_PATH="$BUILD_DIR/app/tmp"
+TMP_PATH="$BUILD_DIR/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
 echo "binaries should be put here $BIN_PATH"
@@ -54,8 +54,8 @@ rm -rf $WKHTMLTOPDF_PATH
 echo "Here's the temp wkhtmltopdf path: " $WKHTMLTOPDF_PATH
 
 echo "-----> Installing fonts"
-mkdir -p $1/app/.fonts
+mkdir -p $1/.fonts
 ls $FONTS_DIR
 echo fonts directory - $FONTS_DIR
-cp $FONTS_DIR/* $1/app/.fonts/
-fc-cache -f $1/app/.fonts
+cp $FONTS_DIR/* $1/.fonts/
+fc-cache -f $1/.fonts
