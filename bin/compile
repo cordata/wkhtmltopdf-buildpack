@@ -59,3 +59,5 @@ ls $FONTS_DIR
 echo fonts directory - $FONTS_DIR
 cp $FONTS_DIR/* $1/.fonts/
 fc-cache -f $1/.fonts
+
+echo "<html><body>help</body></html>" | $BIN_PATH/wkhtmltopdf --page-size Letter --print-media-type --quiet --margin-left 10mm --margin-right 10mm --margin-top 10mm --margin-bottom 10mm --minimum-font-size 13 - - | head
